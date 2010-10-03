@@ -31,11 +31,6 @@ if exists('perl_jump_to_sub')
 endif
 let perl_jump_to_sub = 1
 
-" activate filetype plugin 
-":filetype plugin on
-" add path
-"do not judge [$&/] as part of filename when cmd called
-
 function! Jump2sub()
   let l:wrapscan_flag = &wrapscan
 
