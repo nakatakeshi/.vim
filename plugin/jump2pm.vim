@@ -70,6 +70,7 @@ let perl_jump_to_pm = 1
 autocmd FileType perl set isfname-=$
 autocmd FileType perl set isfname-=&
 autocmd FileType perl set isfname-=/
+autocmd FileType perl set isfname-=+
 "judge > as part of filename when cmd called
 autocmd FileType perl set isfname+=\>
 
