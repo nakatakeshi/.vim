@@ -43,7 +43,7 @@ function! Jump2def()
   try
     " throw E385 if not found 
     :set nowrapscan
-    exe "/def .*".word
+    exe '/def \(self\.\)\='.word
   catch/E385/
     " move to back
     exe "''"
