@@ -35,7 +35,7 @@ function! Jump2def()
   let l:wrapscan_flag = &wrapscan
 
   exe ":mark'"
-  setlocal iskeyword=a-z,A-Z,48-57,_,=,!
+  setlocal iskeyword=a-z,A-Z,48-57,_,=,!,?
   let l:word = expand('<cword>')
   setlocal iskeyword<
   
@@ -43,7 +43,7 @@ function! Jump2def()
   try
     " throw E385 if not found 
     :set nowrapscan
-    exe '/def \(self\.\)\='.word
+    exe '/def \(self\.\)\='.word.'\(\(\(\s\|(\)\+\)\|$\)'
   catch/E385/
     " move to back
     exe "''"
